@@ -40,7 +40,7 @@ class App extends Component {
          />
         <CardList monsters={filteredMonsters} />
         <Switch>
-          <Route exact path="/about" component={About} />
+          <Route exact path="/monsters-rolodex/about" component={About} />
         </Switch>
       </div>
     )
