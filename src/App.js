@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { CardList } from './components/card-list/card-list.component';
 import { SearchBox } from './components/search-box/search-box.component';
+import { Route, Link, Switch} from 'react-router-dom';
+
+import About from './pages/about';
 
 import './App.css';
 class App extends Component { 
@@ -30,11 +33,15 @@ class App extends Component {
     return (
       <div className='App'>
         <h1> Monsters Rolodex </h1>
+        <Link to='/about'>About</Link>
         <SearchBox 
             placeholder='search monsters'
             handleChange={e =>  this.setState({ searchField: e.target.value })}
          />
         <CardList monsters={filteredMonsters} />
+        <Switch>
+          <Route exact path="/about" component={About} />
+        </Switch>
       </div>
     )
   }
