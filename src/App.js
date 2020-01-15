@@ -33,14 +33,14 @@ class App extends Component {
     return (
       <div className='App'>
         <h1> Monsters Rolodex </h1>
-        <Link to='/about'>About</Link>
+        <Link to='/monsters-rolodex/about'>About</Link>
         <SearchBox 
             placeholder='search monsters'
             handleChange={e =>  this.setState({ searchField: e.target.value })}
          />
         <CardList monsters={filteredMonsters} />
         <Switch>
-          <Route exact path="/monsters-rolodex/about" component={About} />
+          <Route  path="/monsters-rolodex/about" component={About} />
         </Switch>
       </div>
     )
