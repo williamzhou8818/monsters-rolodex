@@ -2,6 +2,8 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open('v1').then((cache) => {
         return cache.addAll([
+          '/',
+          './build',
           'https://nkwapi.jbgcore.com:5000/api/about',
         ]);
       })
