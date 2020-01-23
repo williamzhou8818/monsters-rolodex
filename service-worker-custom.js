@@ -3,7 +3,6 @@ self.addEventListener('install', (event) => {
       caches.open('v1').then((cache) => {
         return cache.addAll([
           '/',
-          './build',
           'https://nkwapi.jbgcore.com:5000/api/about',
         ]);
       })
