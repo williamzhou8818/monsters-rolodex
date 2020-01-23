@@ -2,7 +2,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open('v1').then((cache) => {
         return cache.addAll([
-          '/',
+          '/monsters-rolodex/index.html',
           'https://nkwapi.jbgcore.com:5000/api/about',
         ]);
       })
